@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8"/>
+    <meta viewport="width=device-width, initial-scale"/>
     <title>Primer Coinflip calculator</title>
     <meta property="og:title" content="Primer coinflip calculator" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/" />
+    <meta property="og:description" content="Calculator for the coinflip game on https://primerlearning.org" />
     <script src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>
     Probabilities
 </h1>
-Heads: <input type=number id="heads"><br>
-Tails: <input type=number id="tails"><br>
+<div class="input">
+<label for=heads>Heads:</label> <input type=number id="heads">
+<label for="tails">Tails:</label><input type=number id="tails">
 
-<button onclick="calculate()">
+<button type="submit" id="calcButton" onclick="calculate()">
 Calculate
 </button><br>
+</div>
 
-Fair: <span id="good"></span><br>
-Unfair: <span id="bad"></span>
+<div class="result-table">
+<span>Fair:</span><span id="good">0.00 %</span>
+<span>Unfair:</span><span id="bad">0.00 %</span>
+</div>
 </body>
+<script>
+    addOnEnter("heads")
+    addOnEnter("tails")
+</script>
 </html>

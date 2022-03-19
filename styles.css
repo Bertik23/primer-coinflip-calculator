@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html{
+    height: 100%;
+    background-color: #000;
+    color: #CCC;
+}
+
+body{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%
+}
+
+button, input{
+    border: .2rem solid #6ba7c7;
+    border-radius: 1rem;
+    background-color: #222;
+    transition: all 0.2s ease-out;
+    color: #CCC;
+}
+
+input{
+    padding: .3rem;
+}
+
+input:focus-within{
+    border-radius: .4rem;
+}
+
+button{
+    margin-top: .3rem;
+    padding: .2rem;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #111;
+}
+
+.input{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: .1rem
+}
+
+.result-table{
+    justify-self: center;
+    display: grid;
+    width: max-content;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: .2rem;
+}
